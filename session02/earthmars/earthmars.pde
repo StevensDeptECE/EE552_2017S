@@ -18,7 +18,7 @@ float earthOrbitAng = 0;
 float marsOrbitAng = 0;
 void draw() {
   background(0);
-  translate(width/2, height/2);
+  translate(width/2, height/2, -500);
   pushMatrix();
   rotateY(earthOrbitAng);
   translate(400,0);
@@ -31,4 +31,9 @@ void draw() {
   rotateY(-marsOrbitAng);
   rotateY(marsRot);   
   shape(mars);
+  earthOrbitAng += 0.001;
+  marsOrbitAng += 0.0005;
+  earthRot += .01;
+  marsRot += .008;
+  
 }

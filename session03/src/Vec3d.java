@@ -12,8 +12,7 @@ public class Vec3d {
 		Vec3d v4 = Vec3d.cross(v1,v2);
 		double d = Vec3d.dot(v1,v2);
 		Vec3d v5 = v1.plus(v2);
-		Vec3d v6 = v1.times(v2);
-		Vec3d v7 = v1.neg();
+		Vec3d v6 = v1.neg();
 		System.out.println(v1);
 		
 	}	

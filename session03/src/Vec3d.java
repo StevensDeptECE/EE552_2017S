@@ -21,6 +21,5 @@ public class Vec3d {
 		System.out.println(v5);
 		Vec3d v6 = v1.neg();
 		System.out.println(v6);
-
 	}	
 }

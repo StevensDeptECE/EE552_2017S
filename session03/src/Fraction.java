@@ -62,7 +62,7 @@ public class Fraction {
 		
 		// if everything works a certain way, make your new object
 		// work the same way
-		
+
 		Fraction f1 = new Fraction(1, 2);
 		Fraction f2 = new Fraction(3);  // 3/1
 		Fraction f3 = new Fraction();	//  0/1

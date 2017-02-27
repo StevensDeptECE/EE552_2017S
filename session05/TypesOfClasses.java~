@@ -1,0 +1,24 @@
+public class TypesOfClasses {
+	public static void main(String[] args) {
+		TypesOfClasses obj = new TypesOfClasses();
+		
+	}
+
+	
+}
+
+abstract class Shape {
+	private double x,y;
+	public Shape(double x, double y) { this.x = x; this.y = y; }
+	public abstract void draw();
+}
+
+class Circle extends Shape {
+	private int r;
+}
+
+interface Comm {
+	public void send(bytes[] data);
+	public void receive(bytes[] data);
+
+}

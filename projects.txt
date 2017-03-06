@@ -1,0 +1,118 @@
+Design Principle:
+
+1. Figure out what each entity DOES
+2. Discover whether several entities are actually the same (with different names)
+3. Separate Data representation from visualization
+   Graphics goes in a separate "Viewer" class
+
+  Design pattern: Model-View-Controller (originally Smalltalk)
+
+Model = data
+View = graphics or printing or anything else that needs to look at the data
+Controller = software that controls the model, in GUI (MouseEvents how the system responds)
+
+View must know about the model, but model should not know about the view
+
+
+Grav Simulator
+
+System
+	collection of SphericalBody
+	"do gravitation"
+	    plug in different computation?
+
+public class System {
+
+
+        private Numerics solver;
+	public void doIt() {} ///
+}
+
+public class RK45System extends System
+       public void doIt()  {} // compute orbits here...
+}
+solver.doIt();
+
+
+SolarSystem
+Cluster
+Galaxy
+
+
+SphericalBody
+	name: String
+	position : Vec3d
+	velocity
+	mass
+	rotation
+	images
+	radius
+	surface temp
+
+
+Planet extends SphericalBody
+       ???
+
+????Moon
+
+????Asteroid
+	
+
+????Star
+	name: String
+	position : Vec3d
+	velocity
+	mass
+	rotation
+	images
+	radius
+	surface temp
+
+
+Music Editor
+
+Design pattern
+
+Editor
+	List<Action> history
+
+
+	cut() {
+	Cut c = new Cut();
+	history.add(c);
+	c.doIt()
+	}
+	paste()
+	setbegin()
+	setend()
+	increasevolume()
+	record()
+	insertclip()
+	undo() {
+           history.getLast().undo()
+
+	}
+
+
+abstract UndoableAction
+	abstract doIt();
+	abstract undo();
+
+Cut extends UndoableAction
+	doIt(Editor e, start, end)
+	undo()
+
+Paste extends UndoableAction
+	doIt(Editor e, start, end)
+	undo()
+
+
+
+
+
+
+
+
+
+
+

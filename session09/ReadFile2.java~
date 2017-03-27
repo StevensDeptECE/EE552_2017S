@@ -1,0 +1,10 @@
+import java.io.*;
+
+public class ReadFile {
+	public static void main(String[] args) throws IOException {
+		InputFileStream ifs = new InputFileStream("matrix.dat");
+		
+		ifs.close();
+	}
+
+}
